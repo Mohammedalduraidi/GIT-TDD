@@ -7,8 +7,15 @@ const app = express();
 app.use(bodyParser.json());
 app.use(express.static(path.join(__dirname, '../angular-client/')));
 
-app.get('/cats', (req, res) => {
-  // TODO - your code here!
+app.get('/getCats', (req, res) => {
+  // fetch the data from data-base
+  db.Cat.find({}, (err, data) => {
+    if (err) {
+      throw err
+    } else {
+      res.send(data)
+    }
+  })
 
 
 });

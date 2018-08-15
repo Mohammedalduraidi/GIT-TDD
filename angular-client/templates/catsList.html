@@ -1,5 +1,5 @@
 <div ng-controller='catsCtrl'>
-	<table  border='1' style='border-collapse:collapse'>
+	<table border='1' style='border-collapse:collapse'>
 		<thead>
 			<tr>
 				<th>Cat Name</th>
@@ -13,8 +13,10 @@
 						<td>{{cat.catName}}</td>
 						<td>{{cat.ownerEmail}}</td>
 						<td>{{cat.adoptionMessage}}</td>
-						<td><img ng-src="{{cat.imageUrl }}" height=100 width=100></img></td>
+						<td>
+							<img ng-src="{{cat.imageUrl || defaultImage }}" height=100 width=100></img>
+						</td>
 					</tr>
 				</tbody>
-			</table>
-		</div>
+	</table>
+</div>

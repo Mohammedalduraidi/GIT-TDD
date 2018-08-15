@@ -4,8 +4,21 @@ app.component('cats', {
 	templateUrl: '/templates/adoptCat.html'
 });
 app.controller('catsCtrl', ['$scope', '$http', '$window', function ($scope, $http, $window) {
+	$scope.defaultImage = 'https://tse4.mm.bing.net/th?id=OIP.XLWg-PlAJtWnObkpO_i9qQHaEx&pid=15.1&P=0&w=266&h=173'
 	var getCats = function () {
-		// TODO: Your code here
+		//fetch the data form the data-base
+		var req = {
+			method: 'GET',
+			url: '/getCats',
+		}
+
+		$http(req).then((res) => {
+			$scope.cats = res['data']
+
+		}, (err) => {
+			console.log(err)
+
+		});
 
 	};
 	getCats();
@@ -25,11 +38,11 @@ app.controller('catsCtrl', ['$scope', '$http', '$window', function ($scope, $htt
 		}
 
 		$http(req).then((res) => {
-			alert('your shit has been saved!')
+			alert('your information has been saved!')
 
 		}, (err) => {
 			console.log(err)
-			alert('Hello error')
+
 		});
 
 
