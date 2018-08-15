@@ -36,7 +36,7 @@ app.post('/addCats', (req, res) => {
     if (err) {
       throw err;
     } else {
-      console.log("jackel is here", data)
+      
       res.send(data)
     }
   })
