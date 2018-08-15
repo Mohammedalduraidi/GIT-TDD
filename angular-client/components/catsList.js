@@ -11,20 +11,26 @@ app.controller('catsCtrl', ['$scope', '$http', '$window', function ($scope, $htt
 	getCats();
 
 	$scope.addCats = function (catName = '', ownerEmail = '', imageUrl = '', adoptionMessage = '') {
-		console.log('Hello world', catName, ownerEmail,  imageUrl, adoptionMessage)
-var req = {
-	method: 'POST',
-	url: '/addCats',
-	data: {
-		catName: catName,
-		ownerEmail: ownerEmail,
-		imageUrl: imageUrl,
-		adoptionMessage: adoptionMessage
-	}
+		//send data to the server
+		var req = {
+			method: 'POST',
+			url: '/addCats',
+			data: {
+				catName: catName,
+				ownerEmail: ownerEmail,
+				imageUrl: imageUrl,
+				adoptionMessage: adoptionMessage
+			}
 
-}
+		}
 
-$http(req).then((res) => { }, (err) => { });
+		$http(req).then((res) => {
+			alert('your shit has been saved!')
+
+		}, (err) => {
+			console.log(err)
+			alert('Hello error')
+		});
 
 
 	}

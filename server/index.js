@@ -14,8 +14,25 @@ app.get('/cats', (req, res) => {
 });
 
 app.post('/addCats', (req, res) => {
-  console.log('abdalluios', req.body)
-  res.sendStatus(404)
+  //save the request data in data base
+  let catName = req.body.catName
+  let ownerEmail = req.body.ownerEmail
+  let imageUrl = req.body.imageUrl
+  let adoptionMessage = req.body.adoptionMessage
+  let Catious = new db.Cat({
+    catName: catName,
+    ownerEmail: ownerEmail,
+    imageUrl: imageUrl,
+    adoptionMessage: adoptionMessage
+  });
+  Catious.save((err, data) => {
+    if (err) {
+      throw err;
+    } else {
+      console.log("jackel is here", data)
+      res.send(data)
+    }
+  })
 })
 
 
