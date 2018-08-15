@@ -3,7 +3,7 @@
   
   Cats List
 
-# Description  
+# Description:  
 
 It is a Website for adopting and donating cats.
 
@@ -21,7 +21,7 @@ It is a Website for adopting and donating cats.
 
 - npm run unit-test
 
-# Run the Server
+# Run the Server:
 
 - npm start
 - make sure that you are running mongo DB in the Terminal:
