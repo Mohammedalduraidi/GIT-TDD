@@ -9,7 +9,7 @@ It is a Website for adopting and donating cats.
 
 # Technologies:
 
-- MEAN stack 
+- MEAN stack. 
 
 # Installation:
 
