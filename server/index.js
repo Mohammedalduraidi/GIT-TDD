@@ -45,10 +45,11 @@ app.post('/addCats', (req, res) => {
 
 
 let port = 1128;
-
+if (!module.parent) {
 app.listen(port, () => {
   console.log(`listening on port ${port}`);
 });
+}
 module.exports = app
 
 
