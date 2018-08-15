@@ -15,7 +15,7 @@ let catSchema = mongoose.Schema({
   ownerEmail:String,
   imageUrl:String,
   adoptionMessage:String
-});
+})
 
 let Cat = mongoose.model('Cat', catSchema);
 
