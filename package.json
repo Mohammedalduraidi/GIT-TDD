@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-
     "test": "karma test",
     "unit-test": "mocha unit-test",
     "start": "nodemon server/index.js"
@@ -17,6 +16,7 @@
     "body-parser": "^1.18.2",
     "chai": "^4.1.2",
     "chai-http": "^4.0.0",
+    "expect.js": "^0.3.1",
     "express": "^4.16.3",
     "jquery": "^3.3.1",
     "karma": "^3.0.0",
