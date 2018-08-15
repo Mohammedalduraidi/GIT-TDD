@@ -7,7 +7,6 @@
 
     "test": "karma test",
     "unit-test": "mocha unit-test",
-
     "start": "nodemon server/index.js"
   },
   "author": "RBK",
